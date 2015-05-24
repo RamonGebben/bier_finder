@@ -1,0 +1,22 @@
+{
+  "name": "oberon",
+  "version": "1.0.0",
+  "description": "An app to find the nearst brewery",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ramon Gebben <ramon@ra-ge.net> (http://ra-ge.net)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.12.4",
+    "request": "^2.55.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.3.0",
+    "gulp-less": "^3.0.3",
+    "gulp-nodemon": "^2.0.3",
+    "gulp-task-listing": "^1.0.0"
+  }
+}

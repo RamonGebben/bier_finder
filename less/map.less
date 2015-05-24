@@ -1,0 +1,32 @@
+
+
+#map_canvas, .fake_map {
+	width: 100%;
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.fake_map {
+	background: url('/img/background.png') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 10;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+
+	&.hidden {
+		-webkit-animation: scaleDown;
+		-webkit-animation-duration: 1s;
+		-webkit-animation-iteration-count: 1;
+		-webkit-animation-fill-mode: forwards;
+		animation: scaleDown;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	}
+
+
+}

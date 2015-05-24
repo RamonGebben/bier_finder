@@ -1,0 +1,151 @@
+.zip_window {
+	position: fixed;
+	top: 100px; right: 0; left: 0;
+	margin: 0 auto;
+	z-index: 50;
+	max-width: 480px;
+	width: 100%;
+	text-align: center;
+	color: #111;
+	z-index: 11;
+	perspective: 1000;
+	@media screen and ( max-width: 480px ) {
+		top: 0;right: 0; bottom: 0; left: 0;
+  		opacity: 0.8;
+	}
+
+	.invalid_text { display: none; }
+
+	&.hidden {
+  		-webkit-animation: zoom 1.0s forwards;
+  		-webkit-animation-iteration-count: 1;
+  		animation: zoom 1.0s forwards;
+  		animation-iteration-count: 1;
+	}
+
+	&.loading {
+		.flipper {
+			transform: rotateY(180deg);
+		}
+	}
+
+	&.invalid {
+		.flipper {
+			transform: rotateY(0deg);
+
+			.beer_me, input {
+				border-color: red;
+			}
+		}
+
+		.invalid_text { display: block; }
+	}
+
+	.flipper {
+		transition: 0.6s;
+		transform-style: preserve-3d;
+
+		position: relative;
+	}
+
+	.front, .back {
+		backface-visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 30px;
+		min-height: 480px;
+		max-width: 480px;
+		width: 100%;
+		background-color: #fff;
+		border-radius: 4px;
+		border: 1px solid #ddd;
+		-webkit-filter: drop-shadow(0 0 15px #333 );
+		filter: drop-shadow(0 0 15px #333 );
+		@media screen and ( max-width: 480px ) {
+			min-height: auto;
+		}
+	}
+
+	.front { z-index: 2; transform: rotateY(0deg); }
+	.back { transform: rotateY(180deg); }
+
+	.loading_spinner {
+		width: 180px;
+		margin-top: 30px;
+	}
+
+	.brewery_logo { font-size: 100px; }
+}
+
+
+
+.input_wrapper {
+	margin-bottom: 10px;
+	position: relative;
+	width: 100%;
+	border: 1px solid @borderColor;
+	border-radius: 4px;
+	text-align: left;
+
+	input {
+		padding: 15px 120px 15px 20px;
+		width: 100%;
+		font-size: 20px;
+		outline: none;
+		border: none;
+		border-radius: 4px;
+		@media screen and ( max-width: 480px ) {
+			background-color: #fff;
+		}
+	}
+
+	.beer_me {
+		background-color: @borderColor;
+		border: 1px solid @borderColor;
+		font-size: 20px;
+		outline: none;
+		cursor: pointer;
+		padding: 7px 20px;
+		border-radius: 4px;
+		border-left: 0px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		transition: background-color .2s ease-out;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		&:hover {
+			background-color: #ccc;
+			transition: background-color .2s ease-in;
+		}
+	}
+}
+
+.extra_info {
+	.button {
+		padding: 7px 20px;
+		margin: 20px 0;
+		border: 1px solid @obBlue;
+		color: @obBlue;
+		text-decoration: none;
+		display: block;
+		border-radius: 4px;
+		transition: all .2s ease-out;
+
+		&:before {
+			padding-right: 10px;
+		}
+
+		&:hover {
+			background-color: @obBlue;
+			color: #fff;
+			transition: all .2s ease-out;
+		}
+	}
+}
+
+
+
+

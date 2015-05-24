@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bier finder</title>
+	<link rel="stylesheet" href="/css/index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+	<div id="map_canvas"></div>
+	<div class="fake_map"></div>
+
+	<div class="zip_window">
+		<div class="flipper">
+			<div class="front">
+				<h1>Beer Finder</h1>
+				<span class="obf-brewery brewery_logo"></span>
+				<p>Voeg je postcode in en wij vinden een brouwerij bij jou in de buurt.</p>
+				<div class="input_wrapper">
+					<input type="text" class="zipcode_field" placeholder="Postcode: 3562SK" autofocus>
+					<button class="beer_me">Beer Me</button>
+				</div>
+				<div class="invalid_text">Sorry, volgens mij is dat geen postcode. :(</div>
+				<div class="extra_info">
+					<a href="http://github.com/RamonGebben" target="_blank" class="obf-github button">The Code</a>
+					<a href="mailto:ramon@ra-ge.net?subject=HIRED&body=You are hired!" class="obf-hire button">HIRE</a>
+				</div>
+			</div>
+			<div class="back">
+				<h1>Hold on!</h1>
+				<p>We zoeken even de dichtbij zijnde brouwerij...</p>
+				<img class="loading_spinner" src="/img/bubbles.svg" alt="loading...">
+			</div>
+		</div>
+	</div>
+
+	<div class="brewery_window hidden">
+		<div class="bd">
+			<div class="image_wrapper">
+				<img src="/img/brewery.svg" alt="brewery">
+			</div>
+			<h2 id="bd_title"></h2>
+			<div id="bd_info"></div>
+		</div>
+		<span id="close_brewery" class="obf-close"></span>
+	</div>
+
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGlSH0Z44rw4fniavK7IXXIAoSRYYu5G4"></script>
+	<script src="/js/q.js"></script>
+	<script src="/js/map.js"></script>
+	<script src="/js/index.js"></script>
+</body>
+</html>
