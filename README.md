@@ -27,4 +27,4 @@ This lists all the tasks you could run. To run the default task and also start t
 
 	gulp
 
-And point your browser to [:3000](http://localhost:3000)
+And point your browser to [:6789](http://localhost:6789)

@@ -47,7 +47,6 @@ mapper.initialize = function() {
 
 	mapper.map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 	mapper.directionsDisplay.setMap( mapper.map );
-	mapper.getGeoLocation();
 };
 
 mapper.setMarker = function( obj ){
